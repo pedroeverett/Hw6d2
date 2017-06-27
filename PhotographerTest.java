@@ -9,12 +9,17 @@ public class PhotographerTest {
 
   @Before
   public void before() {
-    photographer = new Photographer();
+    photographer = new Photographer("Pedro");
     digitalCamera = new DigitalCamera();
     analogCamera = new AnalogCamera();
   }
 
-  
+  @Test
+  public void addCamera() {
+    photographer.addCamera(digitalCamera);
+    assertEquals(1, photographer.cameraCount());
+  }
+
 
 
 }
