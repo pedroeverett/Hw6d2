@@ -25,4 +25,14 @@ public class Photographer {
     }
     return null;
   }
+
+  public ArrayList cameraDetails() {
+    ArrayList<String> details = new ArrayList<String>();
+    for (Printable camera : cameras) {
+        details.add(camera.details());
+
+    
+      }
+    return details;
+  }
 }

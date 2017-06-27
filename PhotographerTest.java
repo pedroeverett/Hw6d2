@@ -1,5 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import java.util.ArrayList;
 import org.junit.*;
 
 public class PhotographerTest {
@@ -25,6 +26,17 @@ public class PhotographerTest {
     photographer.addCamera(digitalCamera);
     photographer.removeCamera();
     assertEquals(0, photographer.cameraCount());
+  }
+
+  @Test
+  public void checkAnalogcameraDetais() {
+    photographer.addCamera(analogCamera);
+    photographer.addCamera(digitalCamera);
+    ArrayList<String> details = new ArrayList<String>(){{
+      add("Nikon 34T, Noise reduction filter, Hi-resolution");
+      add("Sony ILCE5100L, No noise reduciton, Lo-resolution");
+    }};
+    assertEquals(details, photographer.cameraDetails());
   }
 
 
