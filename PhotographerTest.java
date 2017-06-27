@@ -23,7 +23,7 @@ public class PhotographerTest {
   @Test 
   public void removeCamera() {
     photographer.addCamera(digitalCamera);
-    photographer.emptyBag();
+    photographer.removeCamera();
     assertEquals(0, photographer.cameraCount());
   }
 

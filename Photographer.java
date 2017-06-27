@@ -18,4 +18,11 @@ public class Photographer {
     return this.cameras.size();
   }
 
+  public Printable removeCamera() {
+    if(cameraCount() > 0) {
+      Printable camera = cameras.remove(0);
+      return camera;
+    }
+    return null;
+  }
 }
