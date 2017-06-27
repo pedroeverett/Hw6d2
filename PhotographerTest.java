@@ -39,5 +39,9 @@ public class PhotographerTest {
     assertEquals(details, photographer.cameraDetails());
   }
 
+  @Test
+  public void checkSumPhotos() {
+    assertEquals(950, photographer.sumPhotos());
+  }
 
 }
